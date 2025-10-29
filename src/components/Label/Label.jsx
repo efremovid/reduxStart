@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from "./Label.module.scss"
 
-const Label = ({color}) => {
+const Label = ({color , text}) => {
 
   return (
-    <li className={`${styles[color]}`}>Label</li>
+    <p className={`${styles[color]}`}>{text}</p>
   )
 }
 

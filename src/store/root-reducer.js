@@ -1,30 +1,6 @@
-const [data, setData] = useState([])
-setData([])
+import { combineReducers } from "redux";
+import { filtersReducer } from "./Filters/filters-reducer";
 
-
-// selectors 
-export const selectData = (store) => store.vacancies
-
-
-//reducer
-export const vacanciesReducer = (state, action) => {
-    if (action.type === 'SET_DATA') {
-        return [
-            ...data,
-            action.payload
-        ]
-    }
-}
-
-
-// action
-const setData = (data) => {
-    return {
-        type: 'SET_DATA',
-        payload: data
-    }
-}
-
-// использование action'a
-const dispatch = useDispatch();
-dispatchs(setData([]))
+export const rootReducer = combineReducers({
+    filters: filtersReducer,
+})

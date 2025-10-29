@@ -1,10 +1,13 @@
 import React from "react";
 import Tag from "../Tag/Tag";
+import styles from "./Tags.module.scss"
 
-const Tags = () => {
+const Tags = ({ tags }) => {
   return (
-    <ul>
-      <Tag />
+    <ul className={styles.container}>
+      {tags.map((tag) => (
+        <Tag key={tag} tag={tag} />
+      ))}
     </ul>
   );
 };

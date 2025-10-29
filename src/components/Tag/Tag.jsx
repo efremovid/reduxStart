@@ -1,13 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addFilter } from "../../store/Filters/filters-actions";
 
-const Tag = ({ isFiltered }) => {
+const Tag = ({ isFiltered, tag }) => {
+  const dispatch = useDispatch();
+
   return (
     <>
       {!isFiltered ? (
-        <li>Tag</li>
+        <li onClick={() => dispatch(addFilter(tag))}>{tag}</li>
       ) : (
         <li>
-          Tag<button></button>
+          <button>Tag</button>
         </li>
       )}
     </>

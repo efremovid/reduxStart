@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Card from "../Card/Card";
+import styles from "./Cards.module.scss"
 
-const Cards = () => {
+const Cards = ({ data }) => {
   return (
-    <div>Cards</div>
-  )
-}
+    <ul className={styles.container}>
+      {data.map((el) => (
+        <Card el={el} />
+      ))}
+    </ul>
+  );
+};
 
-export default Cards
+export default Cards;
