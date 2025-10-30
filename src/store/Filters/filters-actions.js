@@ -8,5 +8,5 @@ export const addFilter = (filter) => ({
 
 export const removeFilter = (filter) => ({
   type: REMOVE_FILTER,
-  payload: filter,
+  payload: filter
 });

@@ -4,7 +4,7 @@ import styles from "./Label.module.scss"
 const Label = ({color , text}) => {
 
   return (
-    <p className={`${styles[color]}`}>{text}</p>
+    <p className={`${styles[color]} tag`}>{text}</p>
   )
 }
 

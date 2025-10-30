@@ -24,7 +24,7 @@ const Card = ({ el }) => {
               <li>{el.location}</li>
             </ul>
           </div>
-          <Tags tags={[el.role, el.level, ...el.languages, ...el.tools]} />
+          <Tags tags={[el.role, el.level, ...el.languages, ...el.tools]} isFiltered={false}/>
         </div>
       </div>
     </li>
