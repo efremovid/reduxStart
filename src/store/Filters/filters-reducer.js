@@ -7,7 +7,18 @@ const initialState = [];
 export const filtersReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FILTER: {
-      return [...state, action.payload];
+      const filter = state.find((el) => el === action.payload);
+
+      if (filter !== action.payload) {
+        return [...state, action.payload];
+      }
+
+
+      // if (!state.includes(action.payload)) {
+      //   return [...state, action.payload];
+      // }
+
+      return state;
     }
 
     case REMOVE_FILTER: {
