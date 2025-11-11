@@ -6,3 +6,5 @@ export const addVacancies = (vacancies) => {
     payload: vacancies,
   };
 };
+
+console.log(addVacancies([]))

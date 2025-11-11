@@ -17,7 +17,7 @@ const Card = ({ el }) => {
         </div>
         <div className={styles.center}>
           <div className={styles.bottom}>
-            <h3>{el.positions}</h3>
+            <h3>{el.position}</h3>
             <ul className={styles.info}>
               <li>{el.postedAt}</li>
               <li>{el.contract}</li>

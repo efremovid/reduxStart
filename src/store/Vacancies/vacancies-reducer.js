@@ -4,6 +4,8 @@ const initialState = [];
 
 export const vacanciesReducer = (state = initialState, action) => {
   if (action.type === ADD_VACANCIES) {
+
+    
     return [...state, ...action.payload];
     // return action.payload;
   }
