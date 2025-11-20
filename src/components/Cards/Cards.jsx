@@ -10,14 +10,17 @@ import {
 import { addVacancies } from "../../store/Vacancies/vacancies-actions";
 import { selectSearch } from "../../store/Search/search-selectors";
 import { searchVacancy } from "../../store/Search/search-actions";
+import { selectFilters } from "../../store/Filters/filters-selectors";
 
 const Cards = () => {
   // достаем данные по вакансиям из Store
   const searchResult = useSelector(selectSearch);
+  const filters = useSelector(selectFilters)
   const vacancies = useSelector((state) =>
-    selectSearchVacancies(state, searchResult)
+    selectSearchVacancies(state, searchResult, filters)
   );
 
+  console.log(vacancies)
   // const [vacancies, setVacancies] = useState([])
 
   // записываем данные по вакансиям в Store

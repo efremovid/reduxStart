@@ -6,6 +6,7 @@ import {searchVacancy} from "../../store/Search/search-actions";
 
 const Search = () => {
     const [inputText, setInputText] = useState("");
+    const searchRes = useSelector(selectSearch)
 
     const dispatch = useDispatch();
 
@@ -22,6 +23,7 @@ const Search = () => {
                 type="text"
             />
             <button onClick={handleClick}>search</button>
+            <p>Результат поиска:{searchRes}</p>
         </div>
     );
 };
